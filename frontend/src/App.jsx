@@ -12,6 +12,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Navigate to="/auth" />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/private" element={<UserRoute />}>
           <Route path="upload" element={<UploadImage />} />
