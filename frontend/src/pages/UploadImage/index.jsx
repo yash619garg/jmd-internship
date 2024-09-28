@@ -182,8 +182,8 @@ const UploadImage = () => {
         </div>
       </div>
       {loading && (
-        <div className="w-[100vw] fixed left-0 top-0 text-[16px] text-white h-[100vh] bg-black/90 flex justify-center items-center">
-          uploading......
+        <div className="w-[100vw] text-[30px] fixed left-0 top-0 font-semibold font-sans text-white h-[100vh] bg-black/90 flex justify-center items-center">
+          Uploading...
         </div>
       )}
     </div>
