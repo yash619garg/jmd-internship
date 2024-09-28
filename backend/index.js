@@ -42,8 +42,8 @@ app.use("/api/users", userRouter)
 app.use("/api/images", imageRoute)
 
 
-// app.use(express.static(path.join(__dirname, './frontend/dist')));
-app.use(express.static(path.join(__dirname, './frontend')));
+app.use(express.static(path.join(__dirname, './frontend/dist')));
+// app.use(express.static(path.join(__dirname, './frontend')));
 app.use((req, res, next) => {
     if (req.url.endsWith('.jsx') || req.url.endsWith('.js')) {
         res.contentType('application/javascript');
@@ -53,18 +53,18 @@ app.use((req, res, next) => {
 });
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
-    // res.sendFile(path.join(__dirname, 'frontend', "dist", 'index.html'));
+    // res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
+    res.sendFile(path.join(__dirname, 'frontend', "dist", 'index.html'));
 })
 
-// app.use('/js', express.static(path.join(__dirname, '/frontend/dist/js'), {
-//     // Set content type explicitly to application/javascript
-//     setHeaders: (res, filePath) => {
-//         if (path.extname(filePath) === '.js') {
-//             res.setHeader('Content-Type', 'application/javascript');
-//         }
-//     }
-// }));
+app.use('/js', express.static(path.join(__dirname, '/frontend/dist/js'), {
+    // Set content type explicitly to application/javascript
+    setHeaders: (res, filePath) => {
+        if (path.extname(filePath) === '.js') {
+            res.setHeader('Content-Type', 'application/javascript');
+        }
+    }
+}));
 
 
 const port = process.env.PORT || 5000;
