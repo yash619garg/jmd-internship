@@ -88,15 +88,15 @@ const Auth = () => {
   ) : (
     <div className="w-[100vw] h-[100vh] min-h-[100vh] bg-[#f8f8f8] flex justify-center items-center">
       <div className="absolute left-0 top-0 w-full h-[25%] max-sm:hidden bg-[#263238]"></div>
-      <div className="w-[70%] absolute top-[15%] min-h-[80%] aspect-auto max-h-[600px] max-sm:top-0 max-lg:w-[80%] z-10 max-sm:w-full max-sm:h-[100vh] max-sm:max-h-[100vh] max-sm:rounded-none flex  justify-center rounded-xl bg-white items-center shadow-lg shadow-slate-300">
-        <div className="w-[50%] object-contain flex justify-center items-center  max-[1050px]:hidden h-full relative">
+      <div className="w-[70%] absolute top-[15%] min-h-[80%] aspect-auto max-h-[600px] sm:top-0 lg:w-[80%] z-10 sm:w-full sm:h-[100vh] sm:max-h-[100vh] sm:rounded-none flex  justify-center rounded-xl bg-white items-center shadow-lg shadow-slate-300">
+        <div className="w-[50%] object-contain flex justify-center items-center  md:hidden h-full relative">
           <img
             src="/auth.png"
             className="absolute aspect-auto  w-[400px] h-[400px]"
             alt=""
           />
         </div>
-        <div className="flex flex-col p-4 px-6 max-[400px]:p-3 h-full w-[50%] max-[1050px]:w-[70%] max-sm:w-[90%] items-center justify-center">
+        <div className="flex flex-col p-4 px-6 max-[400px]:p-3 h-full w-[50%] md:w-[70%] sm:w-[90%] items-center justify-center">
           <div className="">
             <IoCamera className="text-[#263238] text-[60px] my-3" />
           </div>
