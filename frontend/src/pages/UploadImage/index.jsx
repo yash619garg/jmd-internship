@@ -90,7 +90,7 @@ const UploadImage = () => {
     <div className="w-full bg-white flex items-center min-h-[100vh] flex-col">
       <div className="w-full overflow-clip min-h-[10vh] bg-[#f7f7f7] text-first border-b-slate-200 border-[2px] mb-8 flex gap-4 items-center justify-between px-10 sm:px-5 text-[35px] sm:text-[25px] ">
         <div className="font-sans text-center text-3xl sm:text-2xl text-[#263238] font-semibold ">
-          UploadnGrab
+          UploadnGrab-New
         </div>
         <div className="flex gap-4 items-center">
           <TooltipProvider>
