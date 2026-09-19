@@ -11,8 +11,7 @@ services:
     ports:
       - "27017:27017"
   jsapp:
-    build:
-      context: .
+    image: yash619garg/js-app:latest
     container_name: jsapp
     environment:
       CLOUD_KEY: ${CLOUD_KEY}
